@@ -51,31 +51,37 @@
             
         ];
 
+        $languages = [
+            "Italiano", "Bahasa Indonesia", "Bahasa Melayu", "Català", "Čeština", "Dansk", "Deutsch", "Eesti", "English", "English (United Kingdom)", "Español", "Español (Latinoamérica)", "Euskara", "Filipino", "Français", "Français (Canada)", "Galego", "Hrvatski", "Isizulu", "Íslenska", "Afrikaans", "Kiswahili", "Latviešu", "Lietuvių", "Magyar", "Nederlands", "Norsk", "Polski", "Português (Brasil)", "Português (Portugal)",
+            "Română", "Slovenčina", "Slovenščina", "Srpski", "Suomi", "Svenska", "Tiếng Việt", "Türkçe", "Ελληνικά", "Български", "Русский", "Русский", "Українська", "አማርኛ", "मराठी", "हिन्दी", "বাংলা", "ગુજરાતી", "தமிழ்", "తెలుగు", "ಕನ್ನಡ", "മലയാളം", "ไทย", "한국어", "中文 (香港)", "中文（简体中文）", "中文（繁體中文）", "日本語"
+        ]
+
     ?>
 
     <header>
+        <div class="header-top">
+            <img src="./assets/logo.png" alt="Logo">
 
-        <img src="./assets/logo.png" alt="Logo">
-
-        <div>
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-user"></i>
+            <div>
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </div>
         </div>
-
+        
+        <nav>
+            <ul>
+                <li><a href="#">Introduzione</a></li>
+                <li><a href="#">Norme sulla privacy</a></li>
+                <li><a href="#">Termini di servizio</a></li>
+                <li><a href="#">Tecnologie</a></li>
+                <li  class="active"><a href="#">Domande frequenti</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li>Introduzione</li>
-            <li>Norme sulla privacy</li>
-            <li>Termini di servizio</li>
-            <li>Tecnologie</li>
-            <li class="active">Domande frequenti</li>
-        </ul>
-    </nav>
 
     <main class="container">
 
-        <?php foreach ($faqs as $key => $faq) { ?>
+        <?php foreach ($faqs as $faq) { ?>
 
             <section class="faq">
 
@@ -89,6 +95,27 @@
         <?php } ?>
 
     </main>
+
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">Google</a></li>
+                <li><a href="#">Tutto su Google</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Termini</a></li>
+            </ul>
+            <div class="footer-right">
+                <i class="fa-solid fa-earth-americas"></i>
+                <select>
+                    <?php foreach($languages as $lang) { ?>
+                        <option> <?php echo $lang ?> </option>
+                    <?php } ?>
+                </select>
+
+            </div>
+        </div>
+        
+    </footer>
 
 </body>
 </html>
